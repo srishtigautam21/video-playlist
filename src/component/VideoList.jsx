@@ -5,30 +5,43 @@ import { PlaylistIcon } from "../assests/allsvg";
 const VideoList = () => {
   const { playlistVideos } = usePlaylist();
   let playlistKeys = Object.keys(playlistVideos);
-  let playlistLength = 0;
-  playlistKeys.forEach((play) => {
-    playlistLength = playlistVideos[play].length;
-  });
-  console.log(playlistVideos, playlistLength);
+  // let playlistLength = [];
+  // playlistKeys.forEach((play) => {
+  //   playlistLength.push(playlistVideos[play].length);
+  // });
+  console.log(playlistVideos, playlistKeys);
   return (
-    <div className='flex gap-[20px] p-4 relative'>
+    <div className='flex gap-[20px] p-4 '>
       {playlistKeys.map((play, index) => {
+        let playlistLength = playlistVideos[play].length;
         let videoList = playlistVideos[play];
         return (
-          <img
-            key={index}
-            src={videoList[0].thumbnail}
-            className=' w-80 h-48 rounded-lg'
-            alt='video-thumbnail'
-          />
+          <div className='relative cursor-pointer'>
+            <img
+              key={index}
+              src={videoList[0].thumbnail}
+              className=' w-80 h-48 rounded-lg'
+              alt='video-thumbnail'
+            />
+            <div className='bg-slate-800 opacity-50 w-28 absolute left-52 top-0 z-50 h-[95%] rounded-tr-lg rounded-br-lg flex flex-col gap-2 items-center justify-center'>
+              <span className=' text-white'>
+                <PlaylistIcon />
+              </span>
+              {/* {playlistLength.map((length) => ( */}
+              <span className='text-white'>{playlistLength} videos</span>
+              {/* ))} */}
+            </div>
+          </div>
         );
       })}
-      <div className='bg-slate-800 opacity-50 w-28 absolute left-56 top-4 z-50 h-[85%] rounded-tr-lg rounded-br-lg'>
-        <span className='text-white flex items-center justify-center h-[100%]'>
-          {playlistLength}
+      {/* <div className='bg-slate-800 opacity-50 w-28 absolute left-56 top-4 z-50 h-[85%] rounded-tr-lg rounded-br-lg flex flex-col gap-2 items-center justify-center'>
+        <span className=' text-white'>
+          <PlaylistIcon />
         </span>
-        <PlaylistIcon />
-      </div>
+        {playlistLength.map((length) => (
+          <span className='text-white'>{length} videos</span>
+        ))}
+      </div> */}
     </div>
   );
 };

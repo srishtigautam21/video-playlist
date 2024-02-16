@@ -73,4 +73,17 @@ export const videos = {
       views: "4.3M",
     },
   ],
+  Music: [
+    {
+      _id: "w11GAWEZnPM",
+      title:
+        "Katy Perry - Harleys In Hawaii (Slowed TikTok) (Lyrics) You and i",
+      description: "Katy Perry - Harleys in Hawaii, From the album 'Smile'",
+      creator: "Dan Music",
+      thumbnail: "https://i.ytimg.com/vi/w11GAWEZnPM/hqdefault.jpg",
+      creatorDp:
+        "https://yt3.ggpht.com/uevARv3HUWCGorIcWvqTS4gTscl2wO4TI3owWOojA3kEO1ulHzlcyOEkS66dLNk8hpaXEwUe=s88-c-k-c0x00ffffff-no-rj",
+      views: "4.5M",
+    },
+  ],
 };
