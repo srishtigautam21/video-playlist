@@ -1,22 +1,32 @@
 import React from "react";
 import { usePlaylist } from "../context/playlistContext";
 import { PlaylistIcon } from "../assests/allsvg";
+import { useNavigate } from "react-router-dom";
 
 const VideoList = () => {
-  const { playlistVideos } = usePlaylist();
-  let playlistKeys = Object.keys(playlistVideos);
+  const { playlistVideos, playlistKeys, setPlaylistKey } = usePlaylist();
+  const navigate = useNavigate();
+
   // let playlistLength = [];
   // playlistKeys.forEach((play) => {
   //   playlistLength.push(playlistVideos[play].length);
   // });
   console.log(playlistVideos, playlistKeys);
+  const handlePlaylist = (playlistKey) => {
+    setPlaylistKey(playlistKey);
+    navigate("/playlist");
+  };
+
   return (
     <div className='flex gap-[20px] p-4 '>
       {playlistKeys.map((play, index) => {
         let playlistLength = playlistVideos[play].length;
         let videoList = playlistVideos[play];
         return (
-          <div className='relative cursor-pointer'>
+          <div
+            className='relative cursor-pointer'
+            onClick={() => handlePlaylist(play)}
+          >
             <img
               key={index}
               src={videoList[0].thumbnail}
