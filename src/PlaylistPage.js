@@ -1,13 +1,14 @@
 import React from "react";
 // import { usePlaylist } from "./context/playlistContext";
 import PlaylistQueue from "./component/PlaylistQueue";
+import VideoComponent from "./component/VideoComponent";
 
 const PlaylistPage = () => {
   //   const { playlistkey } = usePlaylist();
 
   return (
     <div className='flex gap-4'>
-      {/* <VideoComponent /> */}
+      <VideoComponent />
       <PlaylistQueue />
     </div>
   );

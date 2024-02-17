@@ -11,7 +11,7 @@ function App() {
       <div className='text-text1 text-[40px] font-bold'>Video Player</div>
       <Routes>
         <Route path='/' element={<VideoList />} />
-        <Route path='/playlist' element={<PlaylistPage />} />
+        <Route path='/playlist/:id' element={<PlaylistPage />} />
       </Routes>
     </div>
   );

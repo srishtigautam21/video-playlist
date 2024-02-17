@@ -1,20 +1,22 @@
 import React from "react";
 import { usePlaylist } from "../context/playlistContext";
 import { PlaylistIcon } from "../assests/allsvg";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const VideoList = () => {
   const { playlistVideos, playlistKeys, setPlaylistKey } = usePlaylist();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // let playlistLength = [];
   // playlistKeys.forEach((play) => {
   //   playlistLength.push(playlistVideos[play].length);
   // });
   console.log(playlistVideos, playlistKeys);
-  const handlePlaylist = (playlistKey) => {
+  const handlePlaylist = (playlistKey, id) => {
     setPlaylistKey(playlistKey);
-    navigate("/playlist");
+    localStorage.setItem("playlistkey", playlistKey);
+    console.log(playlistKey, "key");
+    // navigate(`/playlist/${id}`);
   };
 
   return (
@@ -22,8 +24,11 @@ const VideoList = () => {
       {playlistKeys.map((play, index) => {
         let playlistLength = playlistVideos[play].length;
         let videoList = playlistVideos[play];
+        const { _id } = videoList[0];
         return (
-          <div
+          <Link
+            to={`/playlist/${_id}`}
+            state={videoList[0]}
             className='relative cursor-pointer'
             onClick={() => handlePlaylist(play)}
           >
@@ -41,7 +46,7 @@ const VideoList = () => {
               <span className='text-white'>{playlistLength} videos</span>
               {/* ))} */}
             </div>
-          </div>
+          </Link>
         );
       })}
       {/* <div className='bg-slate-800 opacity-50 w-28 absolute left-56 top-4 z-50 h-[85%] rounded-tr-lg rounded-br-lg flex flex-col gap-2 items-center justify-center'>
