@@ -35,7 +35,7 @@ const PlaylistQueue = () => {
           <Link
             to={`/playlist/${video._id}`}
             state={video}
-            className='flex gap-1 p-1 hover:bg-slate-200 cursor-pointer xl:gap-2 xl:p-2'
+            className='flex gap-1 p-1 hover:bg-slate-200 w-[95%] cursor-pointer xl:gap-2 xl:p-2'
             style={{
               backgroundColor: selected === video._id ? "lightgrey" : "",
             }}

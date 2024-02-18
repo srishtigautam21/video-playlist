@@ -9,7 +9,7 @@ export const videos = {
       creator: "Fit Tuber",
       thumbnail: "https://i.ytimg.com/vi/ee0SfGSJOTc/hq720.jpg",
       creatorDp:
-        "https://yt3.ggpht.com/ytc/AKedOLSEV5H0Dc_SHuQwWmvhnSJG4guCrWjvhTe8wlzLKA=s68-c-k-c0x00ffffff-no-rj",
+        "https://yt3.ggpht.com/ytc/AIf8zZRVYHRUaBK0IgpeNEiLxVfqxK88ng42jNdQvQSAxg=s88-c-k-c0x00ffffff-no-rj",
       views: "6.1M",
     },
     {
@@ -33,7 +33,7 @@ export const videos = {
         "Watch these 2  delicious Lunch recipes which will also help in weight loss.These are Easy, Tasty and Healthy that you can even enjoy when you are on your weight loss journey.",
       thumbnail: "https://i.ytimg.com/vi/qj80KZ-S2lc/hq720.jpg",
       creatorDp:
-        "https://yt3.ggpht.com/ytc/AKedOLSaBGJ6UWq7XGa0pOhNpNzuw7TCISSXLVluhGF4KQ=s88-c-k-c0x00ffffff-no-rj",
+        "https://yt3.ggpht.com/ytc/AIf8zZToNI66LSkXPp-M66TXnVobzwRVzLtmFddMqucWNw=s88-c-k-c0x00ffffff-no-rj",
       views: "258K",
     },
     {
@@ -45,7 +45,7 @@ export const videos = {
         "These 15 minute lunch recepies will change your life and you would never gonna turn towards takeOuts. ",
       thumbnail: "https://i.ytimg.com/vi/7Yo54RiBUx0/hq720.jpg",
       creatorDp:
-        "https://yt3.ggpht.com/ytc/AKedOLQbgqU4Q28Rgv8-HYZu8nk4LAGuxeVTmCkaZLxhuQ=s88-c-k-c0x00ffffff-no-rj",
+        "https://yt3.ggpht.com/saUT3pTb6OQeVNzSelFemx3wrn8ymSUAXchlOzXJOPL5KaotGydRSOcLLAeZttMW5MqzLUa6KdU=s88-c-k-c0x00ffffff-no-rj",
       views: "3.3M",
     },
     {
@@ -57,7 +57,7 @@ export const videos = {
         "In this video, we'll learn 4 new healthy and tasty lunch recipes. First we'll prepare a hot lentil stew. After that, a creamy and South Indian flavour packed coconut curry. Then we'll make a colourful and delicious poha. The poha you usually make at home, this Satvic poha is 3 times more nutritious. And finally, our special Indian flavour-packed recipe - the wheat pea bowl. So come let's start with our 1st recipe, which is the golden lentil stew. You can have it as a complete meal. ",
       thumbnail: "https://i.ytimg.com/vi/oyIPUgU3KvA/hqdefault.jpg",
       creatorDp:
-        "https://yt3.ggpht.com/ytc/AKedOLQ1hLxB7Rh5OpiFozJMRkVU9km-BO0HDMvEOpJ5=s88-c-k-c0x00ffffff-no-rj",
+        "https://yt3.ggpht.com/t3qFz1Dbr0P69BjtUa8IVbVK1MNpf-mCLHs-X7EwD1rEdQkQ99NzX5lZPN6yJ1ijRk7ymjiY8Mo=s88-c-k-c0x00ffffff-no-rj",
       views: "537K",
     },
     {
