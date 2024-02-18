@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import VideoList from "./component/VideoList";
 import { Routes, Route } from "react-router-dom";
 import PlaylistPage from "./PlaylistPage";

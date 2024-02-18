@@ -7,7 +7,7 @@ const PlaylistPage = () => {
   //   const { playlistkey } = usePlaylist();
 
   return (
-    <div className='flex gap-4'>
+    <div className='flex flex-col gap-y-6 lg:flex lg:flex-row lg:gap-x-4'>
       <VideoComponent />
       <PlaylistQueue />
     </div>
