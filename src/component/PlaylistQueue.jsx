@@ -55,7 +55,7 @@ const PlaylistQueue = () => {
               alt='video-thumbnail'
             />
             <div className='xl:flex flex-col justify-between'>
-              <div className='text-text1 font-bold xl:text-[22px]'>
+              <div className='text-text1 font-semibold xl:font-bold xl:text-[22px]'>
                 {video.title}
               </div>
               <div className='text-text2 xl:text-[20px] xl:font-semibold'>
