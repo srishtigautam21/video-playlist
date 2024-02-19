@@ -12,7 +12,7 @@ const PlaylistProvider = ({ children }) => {
   const [playlistArr, setPlaylistArr] = useState(playlistVideos[playlistkey]);
 
   const [selected, setSelected] = useState(
-    playlistkey ? playlistArr[0]._id : "0"
+    playlistkey !== undefined ? playlistArr[0]._id : "0"
   );
 
   //function for shuffling playlist - used fisher yates sorting algo
