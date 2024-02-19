@@ -24,6 +24,12 @@ Made this by adding youtube video url in src attribute of iframe.
 
 - Responsive for various screens
 
+## Working
+
+- Click on the playlist and a list of videos in the playlist with their video will be shown
+  in the next page.
+- To go back to home page click on the **_video-player_** header
+
 ## Tech Stack
 
 - React
