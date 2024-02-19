@@ -29,6 +29,7 @@ const VideoComponent = () => {
           <img
             src={state.creatorDp}
             className='w-[50px] h-[50px] rounded-[50%]'
+            alt='creatorDp'
           />
           <div className='text-text2 font-semibold'>{state.creator}</div>
         </div>
