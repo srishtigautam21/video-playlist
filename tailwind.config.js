@@ -7,6 +7,8 @@ module.exports = {
         lg: "1050px",
         md: "800px",
         xl: "1600px",
+        tab: "700px",
+        mobile: "415px",
       },
       colors: {
         text1: "#002348",

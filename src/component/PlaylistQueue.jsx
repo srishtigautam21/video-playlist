@@ -1,25 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { usePlaylist } from "../context/playlistContext";
 import { Link } from "react-router-dom";
 import { ShuffleIcon } from "../assests/allsvg";
 
 const PlaylistQueue = () => {
-  const { playlistVideos, shufflePlaylist } = usePlaylist();
+  const {
+    playlistVideos,
+    shufflePlaylist,
+    playlistArr,
+    setPlaylistArr,
+    selected,
+    setSelected,
+    // playlistkey,
+  } = usePlaylist();
 
   let playlistkey = localStorage.getItem("playlistkey");
 
-  const [playlistArr, setPlaylistArr] = useState(playlistVideos[playlistkey]);
-  // const [selected, setSelected] = useState(playlistVideos[playlistkey][0]._id);
-  const [selected, setSelected] = useState(playlistArr[0]._id);
+  // const [playlistArr, setPlaylistArr] = useState(playlistVideos[playlistkey]);
+  // // const [selected, setSelected] = useState(playlistVideos[playlistkey][0]._id);
+  // const [selected, setSelected] = useState(playlistArr[0]._id);
 
   // let shuffledPlaylist = playlistVideos[playlistkey];
+  useEffect(() => {
+    setPlaylistArr(playlistVideos[playlistkey]);
+    setSelected(playlistVideos[playlistkey][0]._id);
+  }, []);
+  let shuffledPlaylist = [];
   const handleShuffle = () => {
-    setPlaylistArr(shufflePlaylist(playlistArr));
-    console.log("here", playlistArr);
+    shuffledPlaylist = shufflePlaylist(playlistArr);
+    console.log("here", shuffledPlaylist);
   };
+  if (shuffledPlaylist.length === 0) {
+    shuffledPlaylist = [...playlistArr];
+  }
   // }, [playlistArr]);
 
-  console.log(playlistArr, playlistVideos, playlistkey, "cjdc");
+  console.log(
+    playlistArr,
+    playlistVideos,
+    playlistkey,
+    "cjdc",
+    shuffledPlaylist
+  );
   return (
     // w-[400px]
     <div className='w-[100%] lg:w-[30%] border-solid border-2 border-slate-500 rounded-lg p-3 flex flex-col gap-2 items-start justify-center lg:justify-start'>
@@ -29,8 +51,8 @@ const PlaylistQueue = () => {
           <ShuffleIcon />
         </div>
       </div>
-
-      {playlistArr?.map((video, index) => {
+      {/* playlistArr */}
+      {shuffledPlaylist?.map((video, index) => {
         return (
           <Link
             to={`/playlist/${video._id}`}

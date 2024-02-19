@@ -5,16 +5,27 @@ const PlaylistContext = createContext({});
 const PlaylistProvider = ({ children }) => {
   const [playlistVideos, setPlaylistVideos] = useState(videos);
   let playlistKeys = Object.keys(playlistVideos);
-  const [playlistkey, setPlaylistKey] = useState("");
-  // const [playlistArr, setPlaylistArr] = useState([]);
+  const [playlistkeys, setPlaylistKey] = useState("");
+
+  let playlistkey = localStorage.getItem("playlistkey");
+  // console.log("in context key", playlistkey);
+  const [playlistArr, setPlaylistArr] = useState(playlistVideos[playlistkey]);
+
+  const [selected, setSelected] = useState(playlistArr[0]._id);
+  console.log(selected, "selected");
+
   const shufflePlaylist = (playlistArr) => {
-    for (let i = playlistArr.length - 1; i > 0; i--) {
+    const tempPlaylistArr = [...playlistArr];
+    for (let i = tempPlaylistArr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [playlistArr[i], playlistArr[j]] = [playlistArr[j], playlistArr[i]];
+      [tempPlaylistArr[i], tempPlaylistArr[j]] = [
+        tempPlaylistArr[j],
+        tempPlaylistArr[i],
+      ];
     }
-    console.log(playlistArr);
-    // setPlaylistArr(playlistArr);
-    return playlistArr;
+    console.log(tempPlaylistArr);
+    setPlaylistArr(tempPlaylistArr);
+    return tempPlaylistArr;
   };
   return (
     <PlaylistContext.Provider
@@ -22,11 +33,14 @@ const PlaylistProvider = ({ children }) => {
         playlistVideos,
         setPlaylistVideos,
         playlistKeys,
-        playlistkey,
+        playlistkeys,
         setPlaylistKey,
         shufflePlaylist,
-        // playlistArr,
-        // setPlaylistArr,
+        playlistArr,
+        setPlaylistArr,
+        selected,
+        setSelected,
+        playlistkey,
       }}
     >
       {children}
