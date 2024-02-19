@@ -1,11 +1,8 @@
-// import "./App.css";
 import VideoList from "./component/VideoList";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import PlaylistPage from "./PlaylistPage";
-// import { usePlaylist } from "./context/playlistContext";
 
 function App() {
-  // const { playlistKeys } = usePlaylist();
   const navigate = useNavigate();
   return (
     <div className='p-8'>

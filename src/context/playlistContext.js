@@ -8,12 +8,13 @@ const PlaylistProvider = ({ children }) => {
   const [playlistkeys, setPlaylistKey] = useState("");
 
   let playlistkey = localStorage.getItem("playlistkey");
-  // console.log("in context key", playlistkey);
+
   const [playlistArr, setPlaylistArr] = useState(playlistVideos[playlistkey]);
 
   const [selected, setSelected] = useState(playlistArr[0]._id);
   console.log(selected, "selected");
 
+  //function for shuffling playlist - used fisher yates sorting algo
   const shufflePlaylist = (playlistArr) => {
     const tempPlaylistArr = [...playlistArr];
     for (let i = tempPlaylistArr.length - 1; i > 0; i--) {
@@ -23,7 +24,6 @@ const PlaylistProvider = ({ children }) => {
         tempPlaylistArr[i],
       ];
     }
-    console.log(tempPlaylistArr);
     setPlaylistArr(tempPlaylistArr);
     return tempPlaylistArr;
   };

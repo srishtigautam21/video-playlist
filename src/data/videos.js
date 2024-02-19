@@ -2,7 +2,6 @@ export const videos = {
   Food: [
     {
       _id: "ee0SfGSJOTc",
-      // category: "Breakfast",
       title: "7 Quick & Healthy Breakfast Options",
       description:
         "7 Quick and Healthy Indian Breakfast options for the entire Week.Breakfast is the most important meal of the day. It is that time of the day when our body is need of energy. So, breakfast should be heavy and balanced. However, in todays fast pace life most of us are either not having breakfast properly or eating the same thing everyday. But not anymore. If you too are tired of eating paranthas daily then keep watching this video as I will share with you 7 Healthy breakfast options which can be cooked in less that 5 minutes using minimum ingredients without compromising on taste.",
@@ -14,7 +13,6 @@ export const videos = {
     },
     {
       _id: "2wZI4S7V2Kk",
-      // category: "Breakfast",
       title: "Simple 6 Vegan Breakfast Recipes ",
       creator: "Radhi Devlukia",
       description:
@@ -26,7 +24,6 @@ export const videos = {
     },
     {
       _id: "qj80KZ-S2lc",
-      // category: "Lunch",
       title: "2 Healthy Veg Lunch Bowl Recipes",
       creator: "Saloni Srivastava",
       description:
@@ -38,7 +35,6 @@ export const videos = {
     },
     {
       _id: "7Yo54RiBUx0",
-      // category: "Lunch",
       title: "Easy 15 Minute Lunches Recepies",
       creator: "Pro Home Cooks",
       description:
@@ -50,7 +46,6 @@ export const videos = {
     },
     {
       _id: "oyIPUgU3KvA",
-      // category: "Lunch",
       title: "4 Quick Satwik Lunch Recipes",
       creator: "Satvic Movement",
       description:
@@ -62,7 +57,6 @@ export const videos = {
     },
     {
       _id: "110G3GvaZns",
-      // category: "Snacks",
       title: "7 Quick & Healthy evening snacks",
       creator: "Fit Tuber",
       description:

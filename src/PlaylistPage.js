@@ -1,13 +1,10 @@
 import React from "react";
-// import { usePlaylist } from "./context/playlistContext";
 import PlaylistQueue from "./component/PlaylistQueue";
 import VideoComponent from "./component/VideoComponent";
 import { useLocation } from "react-router-dom";
 
 const PlaylistPage = () => {
   const { state } = useLocation();
-  console.log(state);
-  //   const { playlistkey } = usePlaylist();
 
   return (
     <div className='flex flex-col gap-y-6 lg:flex lg:flex-row lg:gap-x-4 '>
